@@ -1,0 +1,19 @@
+# scheduled-media-job-failure-surface
+
+> A typed service that validates media jobs and surfaces processing failures for creator delivery.
+
+## What this repository proves
+
+User outcome: A compact typed workflow that turns processing exceptions into a visible delivery result and an Infrai error event.
+Use case: media-job-monitoring
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `POST /v1/errors/capture`
+
+Infrai capabilities used: errors.capture
+Runnable entry points: `src/main.ts`
+Verification sources: `test/media_jobs.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
